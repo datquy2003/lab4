@@ -60,8 +60,8 @@ function validform(f) {
         f.phone.focus();
         return;
     }
-    if (!validatePhone(f.phone.value)) {
-        alert("Phone number must contain only numbers and be between 1-15 digits.");
+    if (!StringMatch(f.phone, /^\(\d{2,4}\)[\s.-]?\d{3}[\s.-]?\d{3}$/)) {
+        alert("Phone is not valid. Format: (XX) XXX-XXX");
         f.phone.focus();
         return;
     }
