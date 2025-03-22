@@ -35,8 +35,8 @@ function validform(f) {
         return;
     }
     let age = parseInt(f.age.value, 10);
-    if (age < 1 || age > 120) {
-        alert("Age must be between 1 and 120.");
+    if (age <= 0 || age >= 200) {
+        alert("Age must be between 0 and 200.");
         f.age.focus();
         return;
     }
