@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valid Form</title>
+    <script src="ValidScript.js"></script>
+</head>
+<body>
+    <form name="frmAccount">
+        Fullname:
+        <input type="text" name="fullname" id="fullname"/><br>
+
+        Age:
+        <input type="text" name="age" id="age"/><br>
+
+        Gender:
+        <input type="radio" name="gender" value="Male"/> Male
+        <input type="radio" name="gender" value="Female"/> Female <br>
+
+        Phone:
+        <input type="text" name="phone" id="phone"/><br>
+
+        <input type="button" value="Submit" onclick="validform(document.forms['frmAccount']);">
+    </form>
+</body>
+</html>
