@@ -60,11 +60,11 @@ function validform(f) {
         f.phone.focus();
         return;
     }
-    if (!StringMatch(f.phone, /^\(\d{2,4}\)[\s.-]?\d{3}[\s.-]?\d{3}$/)) {
-        alert("Phone is not valid. Format: (XX) XXX-XXX");
-        f.phone.focus();
-        return;
-    }
+   if (!StringMatch(f.phone, /^\(\d{2,4}\)[\s.-]?\d{3}[\s.-]?\d{3}$/)) {
+    alert("Phone is not valid. Format: (XX) XXX-XXX");
+    f.phone.focus();
+    return;
+  }
 
     alert("Ban da validate thanh cong!");
     f.submit();
