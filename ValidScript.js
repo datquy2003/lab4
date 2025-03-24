@@ -63,6 +63,6 @@ function validform(f) {
         return;
     }
 
-    alert("Ban da validate thanh cong!");
+    alert("Validate successfully!");
     f.submit();
 }
