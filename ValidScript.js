@@ -7,7 +7,7 @@ function isInteger(value) {
 }
 
 function validatePhone(phone) {
-    return /^\d{1,15}$/.test(phone); 
+    return /^\(\d{2,4}\)[\s.-]?\d{3}[\s.-]?\d{3}$/.test(phone);
 }
 
 function validform(f) {
@@ -22,7 +22,6 @@ function validform(f) {
         f.fullname.focus();
         return;
     }
-
 
     if (checkNull(f.age)) {
         alert("Age must not be empty.");
@@ -41,7 +40,6 @@ function validform(f) {
         return;
     }
 
-   
     let genderChecked = false;
     for (let i = 0; i < f.gender.length; i++) {
         if (f.gender[i].checked) {
@@ -54,17 +52,16 @@ function validform(f) {
         return;
     }
 
-
     if (checkNull(f.phone)) {
         alert("Phone number must not be empty.");
         f.phone.focus();
         return;
     }
-   if (!StringMatch(f.phone, /^\(\d{2,4}\)[\s.-]?\d{3}[\s.-]?\d{3}$/)) {
-    alert("Phone is not valid. Format: (XX) XXX-XXX");
-    f.phone.focus();
-    return;
-  }
+    if (!validatePhone(f.phone.value)) {
+        alert("Phone is not valid. Format: (XX) XXX-XXX");
+        f.phone.focus();
+        return;
+    }
 
     alert("Ban da validate thanh cong!");
     f.submit();
